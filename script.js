@@ -45,6 +45,13 @@ const dossierPrincipal = {
   ],
 };
 
+const dossierPrincipal2 = {
+  nom: "Ada",
+  contenu: {
+    nom: "Projets collectifs Ada",
+  },
+};
+
 // console.log(dossierPrincipal);
 
 //---------------------Etape 1------------------
@@ -54,3 +61,21 @@ function afficherDossier(dossier) {
 }
 
 afficherDossier(dossierPrincipal);
+
+//------------------Etape 2----------------------
+// fonction afficherDossierIteratif (l’utilisation des instructions for… est autorisée)
+
+function afficherDossierIteratif(dossier) {
+  console.log(dossier.nom);
+  for (const elt of dossier.contenu) {
+    if (elt.contenu) {
+      console.log(elt.nom);
+    } else {
+      console.log(elt.nom);
+    }
+  }
+}
+
+afficherDossierIteratif(dossierPrincipal);
+
+//fonction afficherDossierRecursif
